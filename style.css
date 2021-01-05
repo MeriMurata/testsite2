@@ -1,3 +1,7 @@
+body{
+    height: 2000px;
+    background-color: pink;
+}
 
 
 header {
@@ -6,6 +10,7 @@ header {
     height: 70px;
     width: 100%;
     background-color: #ffffff;
+    z-index: 20;
 }
 
 
@@ -27,9 +32,9 @@ header {
 }
 
 .header-title{
-    display: inline-block;
+    display: block;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 900;
     cursor: pointer;
 }
 
@@ -38,7 +43,7 @@ header {
     font-weight: bold;
     cursor: pointer;
     margin: auto;
-  }
+}
 
 
 .left-header a{
@@ -56,11 +61,7 @@ header {
     margin: auto;
     padding: 0;
     list-style: none;
-}
-
-.navigation > nav > ul >li {
-    display: inline-block;
-    
+    width: 100%;
 }
 
 .navigation > nav > ul >li >span{
@@ -75,14 +76,57 @@ header {
     padding: 0 10px;
 }
 
-.navigation > nav > ul >li:hover >span{
-    background-color: #9fd1f194;
-    transition: 0.5s ;
+
+.dropmenu >li >ul{
+    list-style: none;
+    position: absolute;
+    z-index: 9999;
+    top: 100%;
 }
 
-.navigation > nav > ul >li >a{
-    text-decoration: none;
+.dropmenu li ul >li{
+    width: 115%;
+    background-color:rgb(207, 234, 241);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.dropmenu li ul li a{
+    width: 100%;
+    /* background-color:yellow; */
+    color:black;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 10px;
+
+}
+
+.dropmenu li ul li:hover {
+    background-color:white;
+}
+
+.dropmenu li ul li:hover a{
+    color: rgb(24, 129, 199);
+}
+
+.dropmenu li:hover > span{
+    background:white;
+}
+.dropmenu li span:hover{
+    background:rgb(180, 244, 255);
+}
+
+
+#dropmenu li ul li{
+    overflow: hidden;
+    height: 0;
+    transition: .3s;
+  }
+  #dropmenu li:hover ul li{
+    overflow: visible;
+    height: 58px;
+  }
 
 .offer {
     display: flex;    
@@ -96,143 +140,333 @@ header {
     padding: 0 10px;
 }
 
-.navigation > nav > ul >li >ul{
-    height: 0;
-    overflow: hidden;
-    background-color: #ff4444;
-    transition: .7s ease-in-out;
-}
-
-.navigation > nav > ul >li >span{
+.dropmenu > li > a{
     text-decoration: none;
 }
 
-.navigation > nav > ul >li:hover >ul {
-    height: auto;
-    padding: 6px 0;
+
+
+body{
+    background-image: url(image/bg-hero2.png),url(image/bg-hero3.png);
+    background-position: 50% -5%;
+}
+
+
+.main-container {
+    padding-top: 70px;
+    height: 878px;
+    width: auto;
+    background-image: url(image/bg-hero1.png);
+    background-position: 50% -5%;
+}
+
+
+.top-page{
+    height: 650px;
     width: auto;
 }
 
 
-.main-contents {
-    height: 1000px;
-    width: auto;
-    background-color: #3287e9;
+.top-center{
+    height: 323px;
+    width: 414px;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color:#ffffff;
+    border-radius: 10px;
+    
+}
+
+.top-logo{
+    /* background-color: orange; */
+    width: 348px;
+    margin-left: auto;
+    margin-right: auto;    
 }
 
 
+.top-title img{
+    /* background-color: blue; */
+    margin-top: 44px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 280px;
+    height: 58px;
+}
+
+.top-logo p{
+    text-align:center;
+}
+
+.top-title >p{
+    margin-top: 24px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 28px ;
+    width: 348px;
+    /* background-color: yellow; */
+    text-align:center;
+    font-weight: bold;
+    }
 
 
-#nav-drawer {
-    position: relative;
-    margin-left:auto;
+
+
+.comic-botan{
+    width: 290px;
+    background-color:rgb(51,152,179);
+    margin-right: auto;
+    margin-left: auto;
+    width: 296px;
+    height: 72px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-  
-/*チェックボックス等は非表示に*/
-.nav-unshown {
-    display:none;
-}
-  
-/*アイコンのスペース*/
-#nav-open {
-    display: inline-block;
-    width: 30px;
-    height: 22px;
-    vertical-align: middle;
-}
-  
-/*ハンバーガーアイコンをCSSだけで表現*/
-#nav-open span, #nav-open span:before, #nav-open span:after {
-    position: absolute;
-    height: 2px;/*線の太さ*/
-    width: 25px;/*長さ*/
-    border-radius: 5px;
-    background: rgba(48, 147, 228, 0.89);
-    display: block;
-    content: '';
-    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
-#nav-open span:before {
-    bottom: -8px;
+.comic-botan >p{
+    color:#ffffff;
+    font-weight: bold;
 }
 
-#nav-open span:after {
-    bottom: -16px;
 
+.top-page-under {
+    position: relative;
+    top: -80px;
+    height: 228px;
+    width: auto;
+    background-color:black;
+    background-position: 100px 100px 100px 10px 10px; 
 }
-  
 
-/*閉じる用の薄黒カバー*/
-#nav-close {
-    display: none;/*はじめは隠しておく*/
-    position: fixed;
-    z-index: 99;
-    top: 0;/*全体に広がるように*/
-    left: 0;
+.service-point {
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: pink; */
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1100px;
+    height: 363px;
+}
+
+.service-icon{
+    width: 233px;
+    height: 233px;
+    background-color:white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 5px;
+    border-color:black;
+}
+
+.service-icon i{
+    font-size: 100px;
+    color: black;
+}
+
+.service-disc {
     width: 100%;
-    height: 100%;
-    background: black;
-    opacity: 0;
-    transition: .3s ease-in-out;
-}
-  
-/*中身*/
-#nav-content {
-    overflow: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;/*最前面に*/
-    width: 100%;/*右側に隙間を作る（閉じるカバーを表示）*/
-    max-width: 1200px;/*最大幅（調整してください）*/
-    height: 30%;
-    background: #fff;/*背景色*/
-    transition: .3s ease-in-out;/*滑らかに表示*/
-    -webkit-transform: translateY(-105%);
-    transform: translateY(-105%);
+    /* background-color:blue; */
 }
 
-
-/*チェックが入ったらもろもろ表示*/
-#nav-input:checked ~ #nav-close {
-    display: block;/*カバーを表示*/
-    opacity: .5;
+.service-detail{
+    /* background-color: tomato; */
+    z-index: 10;
 }
-  
-#nav-input:checked ~ #nav-content {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);/*中身を表示（右へスライド）*/
-    box-shadow: 6px 0 25px rgba(0,0,0,.15);
+
+.service-detail h2{
+    /* background-color: purple; */
+    width: 233px;
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.service-detail p{
+    /* background-color: green; */
+    width: 233px;
+    display: flex;
+    justify-content: center;
+    color: white;
 }
 
 
 
 @media (max-width:1280px){
+
+
     .header-title{
         display: none;
     }
+
 
 }
 
 @media (max-width:1200px){
     
-    .header-logo{
-        width: 150px;
+    header {
+        display: flex;
+        position: fixed;
+        height: 50px;
+        width: 100%;
+        background-color: #ffffff;
     }
+    
+    
+    .left-header{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        padding-left: 10px;
+    }
+    
+    
+    .header-logo{
+        cursor: pointer;
+        display: block;
+        width: 157px;
+    }
+    
     
     .navigation{
         display: none;
     }
 
+    .drawer-hidden {
+        display: none;
+    }
+    
+    .drawer-open {
+        display: flex;
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+        cursor: pointer;
+    }
+    
+    .drawer-open span,
+    .drawer-open span:before,
+    .drawer-open span:after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 22px;
+        background: rgb(24, 129, 199);
+        transition: 0.5s;
+        position: absolute;
+    }
+    
+    .drawer-open span:before {
+        bottom: 8px;
+      }
+    
+      .drawer-open span:after {
+        top: 8px;
+    }
+    
+    #drawer-check:checked ~ .drawer-open span {
+        background: rgba(255, 255, 255, 0);
+    }
+    
+    #drawer-check:checked ~ .drawer-open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+        background-color: white;
+    }
+    
+    #drawer-check:checked ~ .drawer-open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+        background-color: white;
+    }
+
+    input#drawer-check[type="checkbox"]:checked+label{
+        background-color:rgb(51,152,179);
+    }
+
+
+
+    .drawer-content {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        bottom: 100%;
+        right:0;
+        z-index: 99;
+        background: rgba(255, 255, 255, 0);
+        transition: .5s;
+    }
+    
+    #drawer-check:checked ~ .drawer-content {
+        bottom: 0;
+    }
+    
+    .drawer-list{
+        background-color:white;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+    }
+
+    .drawer-item{
+        /* border:solid 1px blue; */
+        height: 46px;
+        /* background-color: pink; */
+        display: flex;
+        align-items: center;
+    }
+
+    .drawer-item a{
+        display: flex;
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .drawer-item a:before{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    width: 24px;
+    height: 2px;
+    margin-top: -1px;
+    background-color: #121212;
+    z-index: 2;
+    }
+
+    .drawer-item a:after{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    width: 2px;
+    height: 24px;
+    margin-top: -12px;
+    background-color: #121212; 
+    }
+
+
+
 }
 
 
-@media screen and (min-width:1200px) {
-    #nav-open {
-      display:none;
+@media (min-width:1200px) {
+    .hamburger{
+        display: none;
     }
 }
