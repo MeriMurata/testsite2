@@ -35,7 +35,6 @@ $(".mobile-dropdown-main4").hover(function(){
     $(this).toggleClass("minus");
 });
 
-var rellax = new Rellax(' .rellax ');
-
+var rellax = new Rellax('.rellax');
 
 });
